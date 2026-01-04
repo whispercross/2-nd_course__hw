@@ -85,6 +85,7 @@ body {
     background-color: #202027;
     color: white;
     padding-top: 94px;
+    padding-bottom: 144px;
 }
 .about-games__h {
     font-size: 64px;
@@ -97,33 +98,51 @@ body {
 .about-games__games {
     display: grid;
     grid-template-columns: repeat(3, 33%);
+    gap: 32px;
+    margin-top: 72px;
+    height: 1056px;
+    .about-games__column {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
 }
 .about-games__game {
     grid-column: 33%;
     border-radius: 30px;
     background-color: white;
+    color: black;
+    padding-bottom: 36px;
 }
-.game-1 {
-    height: 45%;
-}
-.game-2 {
-    height: 50%;
-}
-.game-3 {
-    height: 45%;
-}
-.game-4 {
-    height: 55%;
-}
-.game-5 {
-    height: 50%;
-}
-.game-6 {
-    height: 55%;
+.about-games__column {
+    height: 100%;
 }
 .about-games__img {
     border-radius: 30px;
-    background-image: url(images/game1.svg);
+    width: 100%;
+}
+.about-games__game-dsc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    p {
+        width: 110px;
+        background-color: #F7F7F7;
+        border-radius: 50px;
+        font-size: 16px;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 8px;
+        padding-bottom: 10px;
+    }
+    h3 {
+        font-size: 32px;
+        font-weight: 700;
+    }
 }
 
 /*подвал*/
