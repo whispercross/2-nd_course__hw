@@ -91,6 +91,25 @@ body {
     color: white;
     padding-top: 94px;
     padding-bottom: 144px;
+    position: relative;
+}
+.about-games__big-star {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    right: 0;
+}
+.about-games__side-small-star {
+    position: absolute;
+    z-index: 1;
+    top: 770px;
+    left: 25px;
+}
+.about-games__side-mid-star {
+    position: absolute;
+    z-index: 1;
+    top: 822px;
+    left: 40px;
 }
 .about-games__h {
     font-size: 64px;
@@ -102,6 +121,8 @@ body {
     font-size: 24px;
 }
 .about-games__games {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: repeat(3, 33%);
     gap: 32px;
@@ -122,6 +143,7 @@ body {
     text-decoration: none;
     &:hover {
         transform: scale(1.1);
+        transition: 0.25s;
     }
 }
 .about-games__column {
@@ -153,6 +175,18 @@ body {
         font-size: 32px;
         font-weight: 700;
     }
+}
+.about-games__bottom-small-star {
+    position: absolute;
+    z-index: 1;
+    bottom: 45px;
+    right: 150px;
+}
+.about-games__bottom-mid-star {
+    position: absolute;
+    z-index: 1;
+    bottom: 65px;
+    right: 52px;
 }
 
 /*подвал*/
