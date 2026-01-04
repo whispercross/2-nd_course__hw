@@ -99,6 +99,7 @@ body {
 .about-games__h {
   font-size: 64px;
   font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .about-games__description {
