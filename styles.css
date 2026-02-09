@@ -59,13 +59,17 @@ body {
 }
 
 .head__button {
+  display: block;
+  text-align: center;
   margin-top: 24px;
   width: 247px;
-  height: 66px;
   background-color: black;
   border-radius: 60px;
   color: white;
   font-size: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-decoration: none;
 }
 .head__button:hover {
   border: 1px solid black;
@@ -93,11 +97,35 @@ body {
   background-color: #202027;
   color: white;
   padding-top: 94px;
+  padding-bottom: 144px;
+  position: relative;
+}
+
+.about-games__big-star {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  right: 0;
+}
+
+.about-games__side-small-star {
+  position: absolute;
+  z-index: 1;
+  top: 770px;
+  left: 25px;
+}
+
+.about-games__side-mid-star {
+  position: absolute;
+  z-index: 1;
+  top: 822px;
+  left: 40px;
 }
 
 .about-games__h {
   font-size: 64px;
   font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .about-games__description {
@@ -106,43 +134,78 @@ body {
 }
 
 .about-games__games {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 33%);
+  gap: 32px;
+  margin-top: 72px;
+  height: 1056px;
+}
+.about-games__games .about-games__column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .about-games__game {
-  grid-column: 33%;
+  display: block;
   border-radius: 30px;
   background-color: white;
+  color: black;
+  padding-bottom: 36px;
+  text-decoration: none;
+}
+.about-games__game:hover {
+  transform: scale(1.1);
+  transition: 0.25s;
 }
 
-.game-1 {
-  height: 45%;
-}
-
-.game-2 {
-  height: 50%;
-}
-
-.game-3 {
-  height: 45%;
-}
-
-.game-4 {
-  height: 55%;
-}
-
-.game-5 {
-  height: 50%;
-}
-
-.game-6 {
-  height: 55%;
+.about-games__column {
+  height: 100%;
 }
 
 .about-games__img {
   border-radius: 30px;
-  background-image: url(images/game1.svg);
+  width: 100%;
+}
+
+.about-games__game-dsc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.about-games__game-dsc p {
+  width: 110px;
+  background-color: #F7F7F7;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+.about-games__game-dsc h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.about-games__bottom-small-star {
+  position: absolute;
+  z-index: 1;
+  bottom: 45px;
+  right: 150px;
+}
+
+.about-games__bottom-mid-star {
+  position: absolute;
+  z-index: 1;
+  bottom: 65px;
+  right: 52px;
 }
 
 /*подвал*/
