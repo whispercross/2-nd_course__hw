@@ -58,7 +58,7 @@ body {
   top: 69px;
 }
 
-.head__button {
+.head__button, .games__dsc a {
   display: block;
   text-align: center;
   margin-top: 24px;
@@ -71,7 +71,7 @@ body {
   padding-bottom: 16px;
   text-decoration: none;
 }
-.head__button:hover {
+.head__button:hover, .games__dsc a:hover {
   border: 1px solid black;
   background-color: white;
   color: black;
@@ -93,11 +93,11 @@ body {
 }
 
 /*блок Об играх*/
-.about-games {
+.about-games, .games {
   background-color: #202027;
   color: white;
   padding-top: 94px;
-  padding-bottom: 144px;
+  padding-bottom: 96px;
   position: relative;
 }
 
@@ -122,7 +122,7 @@ body {
   left: 40px;
 }
 
-.about-games__h {
+h2 {
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -165,7 +165,7 @@ body {
   height: 100%;
 }
 
-.about-games__img {
+.about-games__img, .games__img {
   border-radius: 30px;
   width: 100%;
 }
@@ -206,6 +206,40 @@ body {
   z-index: 1;
   bottom: 65px;
   right: 52px;
+}
+
+/*блок Мини-игры*/
+.games {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.games .games__game {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.games__dsc {
+  grid-column: 50%;
+  margin-top: 48px;
+  margin-left: 48px;
+  margin-right: 48px;
+  color: black;
+}
+.games__dsc h3 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.games__dsc p {
+  font-size: 24px;
+  font-weight: 400;
+  width: 457px;
+}
+.games__img {
+  grid-column: 50%;
 }
 
 /*подвал*/

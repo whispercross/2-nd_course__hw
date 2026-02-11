@@ -90,7 +90,7 @@ body {
     background-color: #202027;
     color: white;
     padding-top: 94px;
-    padding-bottom: 144px;
+    padding-bottom: 96px;
     position: relative;
 }
 .about-games__big-star {
@@ -111,7 +111,7 @@ body {
     top: 822px;
     left: 40px;
 }
-.about-games__h {
+h2 {
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -187,6 +187,43 @@ body {
     z-index: 1;
     bottom: 65px;
     right: 52px;
+}
+/*блок Мини-игры*/
+.games {
+    @extend .about-games;
+    display: flex;
+    flex-direction: column  ;
+    gap: 32px;
+    .games__game {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-radius: 30px;
+        background-color: white;
+    }
+}
+.games__dsc {
+    grid-column: 50%;
+    margin-top: 48px;
+    margin-left: 48px;
+    margin-right: 48px;
+    color: black;
+    h3 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    p {
+        font-size: 24px;
+        font-weight: 400;
+        width: 457px;
+    }
+    a {
+        @extend .head__button;
+    }
+}
+.games__img {
+    @extend .about-games__img;
+    grid-column: 50%;
 }
 
 /*подвал*/
