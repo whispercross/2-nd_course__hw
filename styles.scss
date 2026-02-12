@@ -192,14 +192,14 @@ h2 {
 .games {
     @extend .about-games;
     display: flex;
-    flex-direction: column  ;
+    flex-direction: column;
     gap: 32px;
-    .games__game {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        border-radius: 30px;
-        background-color: white;
-    }
+}
+.games__game {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 50px;
+    background-color: white;
 }
 .games__dsc {
     grid-column: 50%;
@@ -211,6 +211,7 @@ h2 {
         font-size: 48px;
         font-weight: 700;
         margin-bottom: 24px;
+        width: 450px;
     }
     p {
         font-size: 24px;
@@ -225,6 +226,9 @@ h2 {
     @extend .about-games__img;
     grid-column: 50%;
 }
+.games__game:nth-child(2n+1) .games__img {
+    order: -1;
+}
 
 /*подвал*/
 footer {
@@ -237,3 +241,5 @@ footer {
         padding-bottom: 60px;
     }
 }
+
+@import "mobile";

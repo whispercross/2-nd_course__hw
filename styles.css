@@ -214,10 +214,11 @@ h2 {
   flex-direction: column;
   gap: 32px;
 }
-.games .games__game {
+
+.games__game {
   display: grid;
   grid-template-columns: 50% 50%;
-  border-radius: 30px;
+  border-radius: 50px;
   background-color: white;
 }
 
@@ -232,6 +233,7 @@ h2 {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 24px;
+  width: 450px;
 }
 .games__dsc p {
   font-size: 24px;
@@ -240,6 +242,10 @@ h2 {
 }
 .games__img {
   grid-column: 50%;
+}
+
+.games__game:nth-child(2n+1) .games__img {
+  order: -1;
 }
 
 /*подвал*/
