@@ -40,6 +40,9 @@ body {
     z-index: 1;
     right: 0;
 }
+.head__big-img_mobile {
+    display: none;
+}
 .head__top-star1 {
     position: absolute;
     z-index: 2;
@@ -52,7 +55,12 @@ body {
     left: 156px;
     top: 69px;
 }
-
+.head__top-star1_mobile {
+    display: none;
+}
+.head__top-star2_mobile {
+    display: none;
+}
 .head__button {
     display: block;
     text-align: center;
@@ -83,6 +91,12 @@ body {
     z-index: 2;
     top: 538px;
     right: 455px;
+}
+.head__bottom-star1_mobile {
+    display: none;
+}
+.head__bottom-star2_mobile {
+    display: none;
 }
 
 /*блок Об играх*/
@@ -241,5 +255,5 @@ footer {
         padding-bottom: 60px;
     }
 }
-
+/*подключение стилей для мобильной версии*/
 @import "mobile";
