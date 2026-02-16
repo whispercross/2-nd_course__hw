@@ -40,6 +40,9 @@ body {
     z-index: 1;
     right: 0;
 }
+.head__big-img_mobile {
+    display: none;
+}
 .head__top-star1 {
     position: absolute;
     z-index: 2;
@@ -52,7 +55,12 @@ body {
     left: 156px;
     top: 69px;
 }
-
+.head__top-star1_mobile {
+    display: none;
+}
+.head__top-star2_mobile {
+    display: none;
+}
 .head__button {
     display: block;
     text-align: center;
@@ -84,13 +92,19 @@ body {
     top: 538px;
     right: 455px;
 }
+.head__bottom-star1_mobile {
+    display: none;
+}
+.head__bottom-star2_mobile {
+    display: none;
+}
 
 /*блок Об играх*/
 .about-games {
     background-color: #202027;
     color: white;
     padding-top: 94px;
-    padding-bottom: 144px;
+    padding-bottom: 96px;
     position: relative;
 }
 .about-games__big-star {
@@ -111,7 +125,7 @@ body {
     top: 822px;
     left: 40px;
 }
-.about-games__h {
+h2 {
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -188,6 +202,47 @@ body {
     bottom: 65px;
     right: 52px;
 }
+/*блок Мини-игры*/
+.games {
+    @extend .about-games;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.games__game {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 50px;
+    background-color: white;
+}
+.games__dsc {
+    grid-column: 50%;
+    margin-top: 48px;
+    margin-left: 48px;
+    margin-right: 48px;
+    color: black;
+    h3 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        width: 450px;
+    }
+    p {
+        font-size: 24px;
+        font-weight: 400;
+        width: 457px;
+    }
+    a {
+        @extend .head__button;
+    }
+}
+.games__img {
+    @extend .about-games__img;
+    grid-column: 50%;
+}
+.games__game:nth-child(2n+1) .games__img {
+    order: -1;
+}
 
 /*подвал*/
 footer {
@@ -200,3 +255,5 @@ footer {
         padding-bottom: 60px;
     }
 }
+/*подключение стилей для мобильной версии*/
+@import "mobile";
