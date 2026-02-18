@@ -1,8 +1,8 @@
 //Задание 1
 let x = 10;
-alert(a);
+alert(x);
 x = 20;
-alert(a);
+alert(x);
 
 //Задание 2
 const iphoneReleaseYear = 2007;
@@ -46,7 +46,7 @@ alert(num);
 
 //Задание 8
 let age;
-prompt("Сколько тебе лет?");
+prompt("Сколько тебе лет?", 31);
 alert(age);
 
 //Задание 9
@@ -59,4 +59,4 @@ let user = {
 //Задание 10
 prompt("Как вас зовут?");
 console.log(user.name);
-alert("Привет", user.name);
+alert("Привет, ", user.name);
