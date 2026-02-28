@@ -45,7 +45,7 @@ function askAge() {
     let answer;
     if (age < 0) {
         answer = alert("Вы ввели неправильное значение!");
-    } else if (age > 0 && age <= 12) {
+    } else if (age >= 0 && age <= 12) {
         answer = alert("Привет, друг!");
     } else {
         answer = alert("Добро пожаловать!");
@@ -86,24 +86,24 @@ alert (cubeResult);
 
 //Задание 7
 alert("Задание 7");
+//методы вычисления площади круга и длины окружности
+function getArea() {
+    return Math.round(Math.PI * (`${this.radius}` ** 2));
+}
+function getPerimeter() {
+    return Math.round(2 * Math.PI * `${this.radius}`);
+}
+
 //объекты
 let circle1 = {
     radius: 3,
-    getArea() {
-        return Math.round(Math.PI * (`${this.radius}` ** 2));
-    },
-    getPerimeter() {
-        return Math.round(2 * Math.PI * `${this.radius}`);
-    }
+    getArea,
+    getPerimeter
 }
 let circle2 = {
     radius: 6,
-    getArea() {
-        return Math.round(Math.PI * (`${this.radius}` ** 2));
-    },
-    getPerimeter() {
-        return Math.round(2 * Math.PI * `${this.radius}`);
-    }
+    getArea,
+    getPerimeter
 }
 
 //круг 1
