@@ -109,8 +109,8 @@ let circle2 = {
 //круг 1
 let firstCircleArea = circle1.getArea();
 let firstCirclePerimeter = circle1.getPerimeter();
-alert("Площадь круга 1 равна " + firstCircleArea + " см, длина окружности 1 равна " + firstCirclePerimeter + " см.");
+alert("Площадь круга 1 равна " + firstCircleArea + " кв. см, длина окружности 1 равна " + firstCirclePerimeter + " см.");
 //круг 2
 let secondCircleArea = circle2.getArea();
 let secondCirclePerimeter = circle2.getPerimeter();
-alert("Площадь круга 2 равна " + secondCircleArea + " см, длина окружности 2 равна " + secondCirclePerimeter + " см.");
+alert("Площадь круга 2 равна " + secondCircleArea + " кв. см, длина окружности 2 равна " + secondCirclePerimeter + " см.");
