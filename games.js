@@ -13,7 +13,7 @@ function guessNumber() {
             alert("Я дам подсказку: оно больше " + userNumber + ".");
             userNumber = Number(prompt("Попробуйте ещё раз. Какое число я загадала?"));
         }
-        if (randomNumber == userNumber) {
+        if (userNumber == randomNumber) {
             alert("Да, это число " + userNumber + ". Вы угадали!");
             break;
         }
