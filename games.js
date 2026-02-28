@@ -3,12 +3,12 @@ function guessNumber() {
     alert("Нужно угадать число из диапазона от 1 до 100. Загадываю...");
     let randomNumber = Math.floor(Math.random() * 100) + 1;
     alert("Всё.");
-    let userInput = prompt("Какое число я загадала?");
+    let i = 3;
+    let userInput = prompt("У вас есть попыток: " + i + ". Какое число я загадала?");
     if (userInput === null) {
         alert("Вы вышли из игры.");
         return;
     }
-    let i = 3;
     let userNumber = Number(userInput);
     while (userNumber !== randomNumber && i > 0) {
         alert("Вы не угадали число.");
