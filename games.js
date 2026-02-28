@@ -21,7 +21,7 @@ function guessNumber() {
             alert("Я дам подсказку: оно больше " + userNumber + ".");
             userNumber = Number(prompt("Осталось попыток: " + i + ". Какое число я загадала?"));
         }
-        if (i === 0) {
+        if (i == 1) {
             alert("У вас не осталось попыток. Я загадала число " + randomNumber + ".")
             break;
         }
