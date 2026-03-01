@@ -70,12 +70,13 @@ body {
   display: none;
 }
 
-.head__button, .games__dsc a {
+.head__button, .games__dsc button {
   display: block;
   text-align: center;
   margin-top: 24px;
   width: 247px;
   background-color: black;
+  border: 1px solid black;
   border-radius: 60px;
   color: white;
   font-size: 24px;
@@ -83,8 +84,7 @@ body {
   padding-bottom: 16px;
   text-decoration: none;
 }
-.head__button:hover, .games__dsc a:hover {
-  border: 1px solid black;
+.head__button:hover, .games__dsc button:hover {
   background-color: white;
   color: black;
   transition: 0.25s;
@@ -329,7 +329,7 @@ footer p {
     right: 0;
     top: 0;
   }
-  .head__button, .games__dsc a {
+  .head__button, .games__dsc button {
     width: 285px;
   }
   .head__bottom-star1 {
@@ -394,7 +394,7 @@ footer p {
     font-size: 16px;
     width: 249px;
   }
-  .games__dsc a {
+  .games__dsc button {
     width: 285px;
   }
   .games__bottom-small-star {
