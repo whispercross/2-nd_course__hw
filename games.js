@@ -31,3 +31,7 @@ function guessNumber() {
         }
     }
 }
+//игра Простая арифметика
+function solveSimpleMaths() {
+    alert("Нужно решить простые арифметические примеры. Их будет пять.");
+}
