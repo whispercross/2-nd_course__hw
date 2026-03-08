@@ -38,10 +38,33 @@ function simpleMaths() {
     for (i = 1; i <= 5; i++) {
         const mathOperators = ['+', '-', '*', '/'];
         const randomIndex = Math.floor(Math.random() * mathOperators.length);
-        let mathExample = [Math.floor(Math.random() * 10 + 1),  mathOperators[randomIndex], Math.floor(Math.random() * 10 + 1)];
-        const userAnswer = Number(prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет..."));
+        let first = Math.floor(Math.random() * 10 + 1);
+        let second = Math.floor(Math.random() * 10 + 1);
+        let mathExample = [mathOperators[randomIndex]];
+        function checkReduced() { //проверка уменьшаемого и вычитаемого; разность должна быть положительным числом
+            if (first < second) {
+                let temp = first;
+                first = second;
+                second = temp;
+            } //поменять числа местами
+        }
+        function checkDividend() { // проверка делимого и делителя; делимое должно быть кратно делителю, а частное должно быть целым числом
+            if (first < second) {
+                let temp = first;
+                first = second;
+                second = temp; //поменять числа местами
+                if (first % second !== 0) {
+                    do {
+                        first = Math.floor(Math.random() * 10 + 1);
+                    } while (first % second !== 0); // генерировать первое число до тех пор, пока оно не будет кратно второму
+                }
+            }
+        }
         let answer;
         if (mathOperators[randomIndex] == '+') {
+            mathExample.unshift(first);
+            mathExample.push(second);
+            let userAnswer = Number(prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет..."));
             answer = mathExample[0] + mathExample[2];
             if (userAnswer == answer) {
                 alert("Правильно!");
@@ -50,13 +73,10 @@ function simpleMaths() {
                 alert("Неправильно! Будет " + answer);
             }
         } else if (mathOperators[randomIndex] == '-') {
-            //проверка уменьшаемого и вычитаемого; разность должна быть целым положительным числом
-            if (mathExample[0] < mathExample[2]) {
-                do {
-                    mathExample.shift();
-                    mathExample.unshift(Math.floor(Math.random() * 10 + 1));
-                } while (mathExample[0] < mathExample[2]);
-            }
+            checkReduced();
+            mathExample.unshift(first);
+            mathExample.push(second);
+            let userAnswer = Number(prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет..."));
             answer = mathExample[0] - mathExample[2];
             if (userAnswer == answer) {
                 alert("Правильно!");
@@ -65,6 +85,9 @@ function simpleMaths() {
                 alert("Неправильно! Будет " + answer);
             }
         } else if (mathOperators[randomIndex] == '*') {
+            mathExample.unshift(first);
+            mathExample.push(second);
+            let userAnswer = Number(prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет..."));
             answer = mathExample[0] * mathExample[2];
             if (userAnswer == answer) {
                 alert("Правильно!");
@@ -73,18 +96,10 @@ function simpleMaths() {
                 alert("Неправильно! Будет " + answer);
             }
         } else if (mathOperators[randomIndex] == '/') {
-            //проверка делимого и делителя; частное должно быть целым числом
-            if (mathExample[0] < mathExample[2]) {
-                do {
-                    mathExample.shift();
-                    mathExample.unshift(Math.floor(Math.random() * 10 + 1));
-                } while (mathExample[0] < mathExample[2]);
-            }
-            if (mathExample[0] % mathExample[2] !== 0) {
-                do {
-                    mathExample[0] = mathExample[0] + 1;
-                } while (mathExample[0] % mathExample[2] !== 0); //увеличить делимое на 1, пока остаток от деления не равен нулю
-            }
+            checkDividend();
+            mathExample.unshift(first);
+            mathExample.push(second);
+            let userAnswer = Number(prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет..."));
             answer = mathExample[0] / mathExample[2];
             if (userAnswer == answer) {
                 alert("Правильно!");
