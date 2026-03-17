@@ -111,3 +111,51 @@ function simpleMaths() {
     }
     alert("Вы решили правильно такое количество примеров: " + rightAnswersCount + ".");
 }
+//игра Переверни текст
+function flipText() {
+    let userText = String(prompt("Введите текст:"));
+    let userTextLetters = userText.split("").reverse();
+    alert("Перевёрнутый текст - \"" + userTextLetters.join("") + "\".");
+}
+//игра Простая викторина
+function simpleQuiz() {
+    const quiz = [
+        {
+            question: "Какого цвета небо?",
+            options: ["1. Красный", "2. Синий", "3. Зелёный"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+    let rightAnswersCount = 0;
+    for (i = 0; i < quiz.length; i++) {
+        let answerTemplate = /^[а-яё]*$/gi; //должны быть русские буквы
+        let userAnswer = prompt(quiz[i].question + " Варианты ответов: " + quiz[i].options[0] + ". " + quiz[i].options[1] + ". " + quiz[i].options[2] + ".").toLowerCase();
+        while (!answerTemplate.test(userAnswer)) {
+            alert("Вы ввели ответ некорректно. Убедитесь, что у вас включена русская раскладка.");
+            userAnswer = prompt(quiz[i].question + " Варианты ответов: " + quiz[i].options[0] + ". " + quiz[i].options[1] + ". " + quiz[i].options[2] + ".").toLowerCase();
+        };
+        for (j = 0; j < quiz[i].options.length; j++) {
+            let correctAnswerWord = quiz[i].options[quiz[i].correctAnswer - 1].slice(3).toLowerCase();
+            let correctOption = quiz[i].options.find(option => option.startsWith(String(quiz[i].correctAnswer))).toLowerCase();
+            if (correctOption.endsWith(userAnswer)) {
+                alert("Правильно! Это \"" + userAnswer + "\"");
+                rightAnswersCount++;
+                break;
+            } else {
+                alert("Нет, правильный ответ - \"" + correctAnswerWord + "\"");
+                break;
+            }
+        }
+    }
+    alert("Вы ответили правильно на такое количество вопросов: " + rightAnswersCount);
+}
