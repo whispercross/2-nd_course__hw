@@ -1,7 +1,7 @@
 //Задание 1
 function madeFirst() {
     let string = "js";
-    return console.log(string.toUpperCase());
+    console.log(string.toUpperCase());
 }
 
 //Задание 2
@@ -14,7 +14,7 @@ function madeSecond() {
             cats.push(character);
         }
     });
-    return console.log(cats);
+    console.log(cats);
 }
 
 //Задание 3
@@ -34,7 +34,7 @@ function madeFourth() {
 
 //Задание 5
 function madeFifth() {
-    return console.log(Math.round(Math.random() * 10) + 1);
+    console.log(Math.floor(Math.random() * 10) + 1);
 }
 
 //Задание 6
@@ -48,39 +48,43 @@ function madeSixth() {
             temp = numberArray.pop();
         }
     }
-    return console.log(numberArray);
+    console.log(numberArray);
 }
 
 //Задание 7
 function madeSeventh() {
-    let start = Math.round(Math.random() * 10) + 1;
-    let end = Math.round(Math.random() * 10) + 1;
-    console.log(start + " -> " + end);
-    if (start > end && start != end) {
-        let temp = start;
-        start = end;
-        end = temp; 
-    }
-    console.log(start + " -> " + end);
-    const range = new Array();
-    for (i = start; i <= end; i++) {
-        range.push(i);
-    }
-    console.log(range);
-    let randomIndex = Math.floor(Math.random() * range.length);
-    return console.log(range[randomIndex]);
+    //let start = Math.round(Math.random() * 10) + 1;
+    //let end = Math.round(Math.random() * 10) + 1;
+    //console.log(start + " -> " + end);
+    //if (start > end && start != end) {
+    //    let temp = start;
+    //    start = end;
+    //    end = temp; 
+    //}
+    //console.log(start + " -> " + end);
+    //const range = new Array();
+    //for (i = start; i <= end; i++) {
+    //    range.push(i);
+    //}
+    //console.log(range);
+    //let randomIndex = Math.floor(Math.random() * range.length);
+    //console.log(range[randomIndex]);
+
+    let start = 5;
+    let end = 15;
+    let randomNumber = Math.floor(Math.random() * (end - start + 1)) + start;
+    console.log(randomNumber);
 }
 
 //Задание 8
 function madeEighth() {
-    let currentDate = new Date();
-    return console.log(currentDate);
+    console.log(new Date());
 }
 
 //Задание 9
 function madeNinth() {
     let currentDate = new Date();
-    let searchDate = currentDate.setDate(new Date().getDate() + 73);
+    let searchDate = currentDate.setDate(currentDate.getDate() + 73);
     let dayAhead = new Date(searchDate);
     console.log(dayAhead);
 }
