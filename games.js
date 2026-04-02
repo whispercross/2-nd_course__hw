@@ -165,7 +165,10 @@ function rockScissorsPaper() {
     const choices = ["камень", "ножницы", "бумага"];
     const randomIndex = Math.floor(Math.random() * choices.length);
     let userChoice = prompt("Камень, ножницы или бумага?").toLowerCase();
-    if (userChoice !== choices[0] && userChoice !== choices[1] && userChoice !== choices[2]) { alert("Введите корректный вариант."); }
+    do {
+        alert("Введите корректный вариант.");
+        userChoice = prompt("Камень, ножницы или бумага?").toLowerCase();
+    } while (userChoice !== choices[0] && userChoice !== choices[1] && userChoice !== choices[2])
     let compChoice = choices[randomIndex];
     alert("\"" + userChoice + "\" против \"" + compChoice + "\". Победа...");
     if (userChoice === compChoice) { alert("Ничья!"); }
