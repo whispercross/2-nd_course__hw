@@ -64,8 +64,7 @@ function madeFifth() {
     }
     function sayHi (name) {
         console.log(`Привет, ${name}!`);
-        //в задании написано, что код менять нельзя, но чтобы код работал корректно, изменения понадобились именно тут
     }
 
-    delayForSecond(sayHi("Глеб"));
+    delayForSecond(() => sayHi("Глеб"));
 }
