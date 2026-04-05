@@ -159,3 +159,24 @@ function simpleQuiz() {
     }
     alert("Вы ответили правильно на такое количество вопросов: " + rightAnswersCount);
 }
+
+//игра Камень, ножницы, бумага
+function rockScissorsPaper() {
+    const choices = ["камень", "ножницы", "бумага"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    let userChoice = prompt("Камень, ножницы или бумага?").toLowerCase();
+    do {
+        alert("Введите корректный вариант.");
+        userChoice = prompt("Камень, ножницы или бумага?").toLowerCase();
+    } while (userChoice !== choices[0] && userChoice !== choices[1] && userChoice !== choices[2])
+    let compChoice = choices[randomIndex];
+    alert("\"" + userChoice + "\" против \"" + compChoice + "\". Победа...");
+    if (userChoice === compChoice) { alert("Ничья!"); }
+    if ((userChoice === choices[0] && compChoice === choices[1]) || 
+        (userChoice === choices[1] && compChoice === choices[2]) || 
+        (userChoice === choices[2] && compChoice === choices[0])) {
+        alert("Ваша!");
+    } else {
+        alert("Моя!");
+    }
+}
