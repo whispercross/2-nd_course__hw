@@ -69,7 +69,13 @@
         right: 86px;
         bottom: 74px;
     }
-
+    /*бегущая строка*/
+    .running-string span {
+        font-size: 16px;
+    }
+    .running-string__container {
+        height: 51px;
+    }
     /*игры*/
     .about-games {
         display: none;
