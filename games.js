@@ -186,8 +186,7 @@ let changeColorButton = document.querySelector('button#change-color');
 changeColorButton.addEventListener('click', () => {
     let bg1 = document.querySelector('.games');
     let bg2 = document.querySelector('.about-games');
-    const colors = ['red', 'green', 'yellow', 'blue', 'cyan', 'magenta', 'purple', 'pink', 'brown', 'white', 'gray', 'black'];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    bg1.style.backgroundColor = colors[randomIndex];
-    bg2.style.backgroundColor = colors[randomIndex];
+    const randomColor = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16).padEnd(6, '0')}`;
+    bg1.style.backgroundColor = randomColor;
+    bg2.style.backgroundColor = randomColor;
 });
