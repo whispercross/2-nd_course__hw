@@ -47,30 +47,39 @@ function simpleMaths() {
         let first = Math.floor(Math.random() * 10 + 1);
         let second = Math.floor(Math.random() * 10 + 1);
         let mathExample = [mathOperators[randomIndex]];
-        function checkReduced() { //проверка уменьшаемого и вычитаемого; разность должна быть положительным числом
+
+        //проверка уменьшаемого и вычитаемого; разность должна быть положительным числом
+        function checkReduced() {
+            //поменять числа местами
             if (first < second) {
                 let temp = first;
                 first = second;
                 second = temp;
-            } //поменять числа местами
+            }
         }
-        function checkDividend() { // проверка делимого и делителя; делимое должно быть кратно делителю, а частное должно быть целым числом
+
+        // проверка делимого и делителя; делимое должно быть кратно делителю, а частное должно быть целым числом
+        function checkDividend() {
+            //поменять числа местами
             if (first < second) {
                 let temp = first;
                 first = second;
-                second = temp; //поменять числа местами
+                second = temp;
             }
+            // генерировать первое число до тех пор, пока оно не будет кратно второму
             if (first % second !== 0) {
                 do {
                     first = Math.floor(Math.random() * 10 + 1);
-                } while (first % second !== 0); // генерировать первое число до тех пор, пока оно не будет кратно второму
+                } while (first % second !== 0);
             }
         }
+
+        let userInput;
         let answer;
         if (mathOperators[randomIndex] == '+') {
             mathExample.unshift(first);
             mathExample.push(second);
-            let userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
+            userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
             if (userInput === '' || userInput === null) {
                 alert("Конец игры.");
                 break;
@@ -103,7 +112,7 @@ function simpleMaths() {
         } else if (mathOperators[randomIndex] == '*') {
             mathExample.unshift(first);
             mathExample.push(second);
-            let userInput = Number(prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет..."));
+            userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
             if (userInput === '' || userInput === null) {
                 alert("Конец игры.");
                 break;
@@ -120,7 +129,7 @@ function simpleMaths() {
             checkDividend();
             mathExample.unshift(first);
             mathExample.push(second);
-            let userInput = Number(prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет..."));
+            userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
             if (userInput === '' || userInput === null) {
                 alert("Конец игры.");
                 break;
@@ -135,7 +144,11 @@ function simpleMaths() {
             }
         }
     }
-    alert("Вы решили правильно такое количество примеров: " + rightAnswersCount + ".");
+    if (userInput === '' || userInput === null) {
+        alert("Конец игры.");
+    } else {
+        alert("Вы решили правильно такое количество примеров: " + rightAnswersCount + ".");
+    }
 }
 //игра Переверни текст
 function flipText() {
