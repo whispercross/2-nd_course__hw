@@ -74,12 +74,11 @@ function simpleMaths() {
             }
         }
 
-        let userInput;
         let answer;
         if (mathOperators[randomIndex] == '+') {
             mathExample.unshift(first);
             mathExample.push(second);
-            userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
+            let userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
             if (userInput === '' || userInput === null) {
                 alert("Конец игры.");
                 break;
@@ -96,7 +95,7 @@ function simpleMaths() {
             checkReduced();
             mathExample.unshift(first);
             mathExample.push(second);
-            userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
+            let userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
             if (userInput === '' || userInput === null) {
                 alert("Конец игры.");
                 break;
@@ -112,7 +111,7 @@ function simpleMaths() {
         } else if (mathOperators[randomIndex] == '*') {
             mathExample.unshift(first);
             mathExample.push(second);
-            userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
+            let userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
             if (userInput === '' || userInput === null) {
                 alert("Конец игры.");
                 break;
@@ -129,7 +128,7 @@ function simpleMaths() {
             checkDividend();
             mathExample.unshift(first);
             mathExample.push(second);
-            userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
+            let userInput = prompt("Пример " + i + ". " + mathExample[0] + " " + mathExample[1] + " " + mathExample[2] + " будет...");
             if (userInput === '' || userInput === null) {
                 alert("Конец игры.");
                 break;
@@ -143,11 +142,9 @@ function simpleMaths() {
                 alert("Неправильно! Будет " + answer);
             }
         }
-    }
-    if (userInput === '' || userInput === null) {
-        alert("Конец игры.");
-    } else {
-        alert("Вы решили правильно такое количество примеров: " + rightAnswersCount + ".");
+        if (i === 5) {
+            alert("Вы решили правильно такое количество примеров: " + rightAnswersCount);
+        }
     }
 }
 //игра Переверни текст
