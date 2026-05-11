@@ -214,7 +214,9 @@ function simpleQuiz() {
             }
         }
     }
-    alert("Вы ответили правильно на такое количество вопросов: " + rightAnswersCount);
+    if (i === quiz.length) {
+        alert("Вы ответили правильно на такое количество вопросов: " + rightAnswersCount);
+    }
 }
 //игра Камень, ножницы, бумага
 function rockScissorsPaper() {
