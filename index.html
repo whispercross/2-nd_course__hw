@@ -25,6 +25,38 @@
             <img class="head__bottom-star1-mobile" src="images/head__bottom-star1_mobile.svg" alt="head bottom star 1 mobile">
             <img class="head__bottom-star2-mobile" src="images/head__bottom-star2_mobile.svg" alt="head bottom star 2 mobile">
         </header>
+        <div class="running-string">
+            <div class="running-string__container">
+                <div class="running-string__games_1">
+                    <span>ВИКТОРИНА</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>УГАДАЙ ЧИСЛО</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>ПЕРЕВЕРНИ ТЕКСТ</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>ПРОСТАЯ АРИФМЕТИКА</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                </div>
+                <div class="running-string__games_2">
+                    <span>ВИКТОРИНА</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>УГАДАЙ ЧИСЛО</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>ПЕРЕВЕРНИ ТЕКСТ</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>ПРОСТАЯ АРИФМЕТИКА</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                    <span>ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</span>
+                    <img src="images/running-string-star.svg" alt="running-string-star">
+                </div>
+            </div>
+        </div>
         <div class="about-games centering">
             <h2 class="about-games__h" id="about">Об играх</h2>
             <p class="about-games__description">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть каждый.
@@ -33,7 +65,7 @@
             <img class="about-games__side-small-star" src="images/main-side-small-star.svg" alt="about-games side small star">
             <img class="about-games__side-mid-star" src="images/main-side-mid-star.svg" alt="about-games side mid star">
             <div class="about-games__games">
-                <div class="about-games__column">
+                <div>
                     <a class="about-games__game" href="#game1">
                         <img class="about-games__img" src="images/game1.png" alt="game1">
                         <section class="about-games__game-dsc">
@@ -49,7 +81,7 @@
                         </section>
                     </a>
                 </div>
-                <div class="about-games__column">
+                <div>
                     <a class="about-games__game" href="#game2">
                         <img class="about-games__img" src="images/game2.png" alt="game2">
                         <section class="about-games__game-dsc">
@@ -65,7 +97,7 @@
                         </section>
                     </a>
                 </div>
-                <div class="about-games__column">
+                <div>
                     <a class="about-games__game" href="#game3">
                         <img class="about-games__img" src="images/game3.png" alt="game3">
                         <section class="about-games__game-dsc">
@@ -129,10 +161,60 @@
                 <div class="games__dsc">
                     <h3>Генератор случайных цветов</h3>
                     <p>Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <button>Играть!</button>
+                    <button id="change-color">Играть!</button>
                 </div>
                 <img class="games__img" src="images/game6.png" alt="game6">
             </div>
+            <!--<div class="games__container-tb">
+                <div class="games__game" id="game1">
+                <div class="games__dsc">
+                    <h3>Угадай число</h3>
+                    <p>Попробуй угадать случайное число от 1 до 100.</p>
+                    <button onclick="guessNumber()">Играть!</button>
+                </div>
+                <img class="games__img" src="images/game1.png" alt="game1">
+                </div>
+                <div class="games__game" id="game2">
+                    <div class="games__dsc">
+                        <h3>Простая арифметика</h3>
+                        <p>Попробуй решить простые арифметические задачи.</p>
+                        <button onclick="simpleMaths()">Играть!</button>
+                    </div>
+                    <img class="games__img" src="images/game2.png" alt="game2">
+                </div>
+                <div class="games__game" id="game3">
+                    <div class="games__dsc">
+                        <h3>Переверни текст</h3>
+                        <p>Попробуй ввести текст, который будет перевернут.</p>
+                        <button onclick="flipText()">Играть!</button>
+                    </div>
+                    <img class="games__img" src="images/game3.png" alt="game3">
+                </div>
+                <div class="games__game" id="game4">
+                    <div class="games__dsc">
+                        <h3>Камень, ножницы, бумага</h3>
+                        <p>Сыграй в популярную игру против компьютера.</p>
+                        <button onclick="rockScissorsPaper()">Играть!</button>
+                    </div>
+                    <img class="games__img" src="images/game4.png" alt="game4">
+                </div>
+                <div class="games__game" id="game5">
+                    <div class="games__dsc">
+                        <h3>Простая викторина</h3>
+                        <p>Отвечай на вопросы викторины с вариантами ответов.</p>
+                        <button onclick="simpleQuiz()">Играть!</button>
+                    </div>
+                    <img class="games__img" src="images/game5.png" alt="game5">
+                </div>
+                <div class="games__game" id="game6">
+                    <div class="games__dsc">
+                        <h3>Генератор случайных цветов</h3>
+                        <p>Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
+                        <button id="change-color">Играть!</button>
+                    </div>
+                    <img class="games__img" src="images/game6.png" alt="game6">
+                </div>
+            </div>-->
             <img class="games__bottom-small-star" src="images/main-side-small-star.svg" alt="about-games side small star">
             <img class="games__bottom-mid-star" src="images/main-side-mid-star.svg" alt="about-games side mid star">
         </div>
